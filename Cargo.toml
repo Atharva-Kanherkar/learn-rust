@@ -1,0 +1,31 @@
+[package]
+name = "learn-rust"
+version = "0.1.0"
+edition = "2021"
+
+# Each lesson (and the playground) is its own runnable binary.
+# Run any of them with:  cargo run --bin <name>
+
+[[bin]]
+name = "01_hello"
+path = "lessons/01_hello/main.rs"
+
+[[bin]]
+name = "02_variables"
+path = "lessons/02_variables/main.rs"
+
+[[bin]]
+name = "03_functions"
+path = "lessons/03_functions/main.rs"
+
+[[bin]]
+name = "04_control_flow"
+path = "lessons/04_control_flow/main.rs"
+
+[[bin]]
+name = "05_ownership"
+path = "lessons/05_ownership/main.rs"
+
+[[bin]]
+name = "playground"
+path = "playground/main.rs"
