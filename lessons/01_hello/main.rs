@@ -13,9 +13,6 @@ fn main() {
     // `{}` is a placeholder that gets filled in by the argument after the string.
     let name = "learner";
     println!("Welcome, {name}!"); // Rust can inline variables right inside the braces.
-
-    // ---- YOUR TURN ----
-    // TODO: Add a line that prints a number using a `{}` placeholder.
-    // Example goal output:  I will write 1000 lines of Rust: 1000
-    // Try it yourself, then run the program again and tell your copilot how it went.
+    let number = 1000;
+  println!("I will write rust {number}")
 }
