@@ -46,6 +46,52 @@ For every new concept, follow this rhythm:
 
 Update this list as we go. When I finish a lesson, suggest the next one.
 
+## Progress so far
+
+**Done: Lessons 1–4.** Next up: **Lesson 5 — ownership & borrowing.**
+
+Lessons 1–4 each have a worked example plus my completed TODO solutions in their
+`main.rs`. Read those files to see exactly what I've written myself.
+
+What I've covered and can be assumed to know:
+
+- **L1 — hello/cargo:** `fn main`, `println!` as a macro, `{}` placeholders and
+  `{name}` inlining, `cargo run --bin <name>`, `target/` is git-ignored.
+- **L2 — variables:** `let` is immutable by default; `mut` opts in to mutation
+  (same slot, type fixed); shadowing makes a *new* variable so the type CAN
+  change; shadowing is scope-bounded; `const` + SCREAMING_CASE; `.parse::<i32>()`
+  with turbofish and `.unwrap()` (used but not yet explained — owed in L8).
+- **L3 — functions/expressions:** typed params and return types are mandatory at
+  boundaries; tail expression (no semicolon) is the return value; the semicolon
+  *discards* a value; `return` is for early bail-out only; `if` and `{}` blocks
+  are expressions; statement vs expression.
+- **L4 — control flow:** conditions must be `bool` (no truthiness); `loop` /
+  `while` / `for` and when to pick each; `break <value>` makes `loop` an
+  expression; `0..3` exclusive vs `0..=3` inclusive; `.enumerate()`; `match`
+  with `|`, ranges, and `_`; tuple destructuring via `match (n % 3, n % 5)`;
+  exhaustiveness is enforced (error E0004).
+
+Rough edges to keep reinforcing:
+
+- I sometimes reach for `return` inside an `if` when the idiomatic move is an
+  `if`/`match` **expression** whose branch value *is* the result. Nudge me
+  toward the expression form.
+- I default to `:` where `=` belongs (`let x: expr;`) — a type-annotation slot
+  vs an assignment. Watch for it.
+- Indentation drifts; just tell me to run `cargo fmt`.
+- Still owed to me, deferred on purpose: `.unwrap()` (L8), what `&` really means
+  in `&str` / `&fruits` (L5), and lifetimes like `&'static str` (L5+).
+
+Teaching notes that worked well for me:
+
+- Deliberately breaking things, then reading the error, taught me more than the
+  worked examples. Keep including a "predict, THEN run" TODO in every lesson.
+- When I say I don't understand a concept "even a bit", drop all jargon and
+  re-explain it as the plainest possible mechanical rule, then compare it to
+  something from an earlier lesson.
+- Lessons 6–10 don't have folders or `Cargo.toml` entries yet — create each one
+  (with its own `[[bin]]` entry) when we get to it.
+
 ## How the repo is organized
 
 - `lessons/NN_topic/` — each lesson is its own folder with a `main.rs` and a `NOTES.md`.

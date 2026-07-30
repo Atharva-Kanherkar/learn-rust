@@ -14,5 +14,5 @@ fn main() {
     let name = "learner";
     println!("Welcome, {name}!"); // Rust can inline variables right inside the braces.
     let number = 1000;
-  println!("I will write rust {number}")
+    println!("I will write rust {number}")
 }
